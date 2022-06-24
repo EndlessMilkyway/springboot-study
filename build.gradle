@@ -1,0 +1,39 @@
+buildscript {
+    // build.gradle 내에서 사용할 전역 변수 설정
+    ext {
+        springBootVersion = '2.1.7.RELEASE'
+    }
+    // 의존성(라이브러리)들을 어디서 받을지를 지정 - jcenter는 현재 deprecated 됨
+    repositories {
+        mavenCentral()
+        // jcenter()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
+// 플러그인 선언 방식 -> apply plugin: 'java'와 같은 방식에서 아래 방식으로 변경 됨
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'io.spring.dependency-management'
+
+group 'com.milkyway.study'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    // jcenter()
+}
+
+dependencies {
+    // 원형 compile('org.springframework.boot:spring-boot-starter-web) - compile이 deprecated됨
+    implementation('org.springframework.boot:spring-boot-starter-web')
+    // 원형 testCompile('org.springframework.boot:spring-boot-starter-test) - testCompile이 deprecated됨
+    testImplementation('org.springframework.boot:spring-boot-starter-test')
+}
+
+/* test {
+    useJUnitPlatform()
+} */
