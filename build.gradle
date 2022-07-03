@@ -30,6 +30,9 @@ repositories {
 dependencies {
     // 원형 compile('org.springframework.boot:spring-boot-starter-web) - compile이 deprecated됨
     implementation('org.springframework.boot:spring-boot-starter-web')
+    implementation('org.projectlombok:lombok')
+    implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+    implementation('com.h2database:h2')
     // 원형 testCompile('org.springframework.boot:spring-boot-starter-test) - testCompile이 deprecated됨
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
