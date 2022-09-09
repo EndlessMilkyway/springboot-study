@@ -33,6 +33,7 @@ dependencies {
     implementation('org.projectlombok:lombok')
     implementation('org.springframework.boot:spring-boot-starter-data-jpa')
     implementation('com.h2database:h2')
+    implementation('org.springframework.boot:spring-boot-starter-mustache')
     // 원형 testCompile('org.springframework.boot:spring-boot-starter-test) - testCompile이 deprecated됨
     testImplementation('org.springframework.boot:spring-boot-starter-test')
 }
