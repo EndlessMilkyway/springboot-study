@@ -16,8 +16,6 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
@@ -70,10 +68,10 @@ public class PostsApiControllerTest {
     public void Posts_수정된다() throws Exception {
         //given
         Posts savedPosts = postsRepository.save(Posts.builder()
-                        .title("title")
-                        .content("content")
-                        .author("author")
-                        .build());
+                .title("title")
+                .content("content")
+                .author("author")
+                .build());
 
         Long updateId = savedPosts.getId();
         String expectedTitle = "title2";
